@@ -1,11 +1,12 @@
 import type { MetadataRoute } from "next";
+import { tracks } from "@/data/tracks";
 
 const siteUrl = "https://ghosttrance.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
 
-  return [
+  const staticRoutes: MetadataRoute.Sitemap = [
     {
       url: siteUrl,
       lastModified,
@@ -31,4 +32,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
   ];
+
+  const trackRoutes: MetadataRoute.Sitemap = tracks.map((track) => ({
+    url: `${siteUrl}/music/${track.slug}`,
+    lastModified,
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
+
+  return [...staticRoutes, ...trackRoutes];
 }

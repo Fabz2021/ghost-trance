@@ -73,3 +73,11 @@ export const tracks: Track[] = [
     genreTags: ["Ambient", "Electronic", "Cinematic"],
   },
 ];
+
+export function getTrackBySlug(slug: string) {
+  return tracks.find((track) => track.slug === slug);
+}
+
+export function getRelatedTracks(slug: string, count = 3) {
+  return tracks.filter((track) => track.slug !== slug).slice(0, count);
+}

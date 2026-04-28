@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Track } from "@/data/tracks";
 import { YouTubeEmbed } from "@/components/youtube-embed";
 
@@ -26,17 +27,32 @@ export function TrackCard({ track }: TrackCardProps) {
           ) : null}
         </div>
         <div className="space-y-3">
-          <h2 className="text-xl font-semibold text-zinc-50">{track.title}</h2>
+          <h2 className="text-xl font-semibold text-zinc-50">
+            <Link
+              href={`/music/${track.slug}`}
+              className="transition hover:text-[#f0d38a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f0d38a]"
+            >
+              {track.title}
+            </Link>
+          </h2>
           <p className="text-sm leading-6 text-zinc-400">{track.description}</p>
         </div>
-        <a
-          href={track.youtubeUrl}
-          target="_blank"
-          rel="noreferrer"
-          className="mt-auto inline-flex w-fit items-center justify-center rounded-full border border-[#d8b45d]/35 px-4 py-2 text-sm font-semibold text-[#f0d38a] transition hover:border-[#f0d38a] hover:bg-[#d8b45d] hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f0d38a]"
-        >
-          Watch on YouTube
-        </a>
+        <div className="mt-auto flex flex-wrap gap-3">
+          <Link
+            href={`/music/${track.slug}`}
+            className="inline-flex w-fit items-center justify-center rounded-full bg-[#d8b45d] px-4 py-2 text-sm font-semibold text-black transition hover:bg-[#f0d38a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f0d38a]"
+          >
+            Open Track Page
+          </Link>
+          <a
+            href={track.youtubeUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex w-fit items-center justify-center rounded-full border border-[#d8b45d]/35 px-4 py-2 text-sm font-semibold text-[#f0d38a] transition hover:border-[#f0d38a] hover:bg-[#d8b45d] hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f0d38a]"
+          >
+            Watch on YouTube
+          </a>
+        </div>
       </div>
     </article>
   );

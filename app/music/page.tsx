@@ -29,8 +29,8 @@ export default function MusicPage() {
           <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-400">
             This catalogue highlights Ghost Trance / Ghostrance tracks with
             embedded YouTube videos, direct listening links, and SEO-friendly
-            context around the production and promotion work behind each
-            release.
+            individual track pages around the production and promotion work
+            behind each release.
           </p>
         </div>
       </section>
@@ -74,6 +74,10 @@ export default function MusicPage() {
             </div>
             <p className="text-sm text-zinc-500">{tracks.length} videos</p>
           </div>
+          <p className="mb-6 max-w-3xl leading-7 text-zinc-400">
+            Open any track page for the video embed, genre tags, description,
+            YouTube link, and related Ghostrance tracks.
+          </p>
           <div className="grid gap-6 lg:grid-cols-2">
             {tracks.map((track) => (
               <TrackCard key={track.slug} track={track} />
