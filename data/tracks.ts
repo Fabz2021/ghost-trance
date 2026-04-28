@@ -3,8 +3,8 @@ export type Track = {
   title: string;
   description: string;
   youtubeId: string;
-  youtubeUrl?: string;
-  genre: string;
+  youtubeUrl: string;
+  genreTags: string[];
   featured?: boolean;
 };
 
@@ -13,105 +13,63 @@ export const ghostranceYouTubeChannelUrl =
 
 export const ghostranceYouTubeChannelName = "Ghostrance";
 
+const youtubeWatchUrl = (videoId: string) =>
+  `https://www.youtube.com/watch?v=${videoId}`;
+
 export const tracks: Track[] = [
   {
-    slug: "mantra",
-    title: "Ghostrance - Mantra (Official Video)",
+    slug: "divine",
+    title: "Divine - Ghostrance (Official Video) DnB",
     description:
-      "A high-pressure Ghost Trance cut with liquid DnB motion, cinematic tension, and a late-night club pulse.",
-    youtubeId: "cUbZykps0_c",
-    youtubeUrl: "https://www.youtube.com/watch?v=cUbZykps0_c",
-    genre: "Liquid DnB",
+      "A high-energy Ghostrance DnB track with driving rhythm, atmospheric electronic textures, and underground club energy.",
+    youtubeId: "BMnicP-zPA0",
+    youtubeUrl: youtubeWatchUrl("BMnicP-zPA0"),
+    genreTags: ["DnB", "Drum and Bass", "Electronic"],
     featured: true,
   },
   {
-    slug: "wrongbeat",
-    title: "Wrongbeat - Ghostrance (Official Video)",
-    description:
-      "Dark electronic rhythm work built around house and techno pressure, heavy low-end movement, and a stripped underground edge.",
-    youtubeId: "2j4_EQ9Sro0",
-    youtubeUrl: "https://www.youtube.com/watch?v=2j4_EQ9Sro0",
-    genre: "Electronic",
-  },
-  {
-    slug: "divine",
-    title: "Divine - Ghostrance (Official Video)",
-    description:
-      "DnB pressure with bright melodic flashes, designed for fast cuts, night drives, and high-energy promotion.",
-    youtubeId: "BMnicP-zPA0",
-    youtubeUrl: "https://www.youtube.com/watch?v=BMnicP-zPA0",
-    genre: "DnB",
-  },
-  {
-    slug: "khabib",
-    title: "Khabib - Ghostrance (Official Video)",
-    description:
-      "A punchy electronic track with a fight-night atmosphere, tight percussion, hip hop weight, and cinematic impact.",
-    youtubeId: "7REsGspyg2Q",
-    youtubeUrl: "https://www.youtube.com/watch?v=7REsGspyg2Q",
-    genre: "Electronic",
-  },
-  {
     slug: "let-it-go",
-    title: "Let It Go - Ghostrance (Official Video)",
+    title: "Let It Go - Ghostrance (Official Video) Dance",
     description:
-      "Dance-focused Ghost Trance energy with clean momentum, vocal movement, and a polished club-ready feel.",
+      "A melodic dance track from Ghostrance built around movement, release, and uplifting electronic energy.",
     youtubeId: "IaQ0KfItXYc",
-    youtubeUrl: "https://www.youtube.com/watch?v=IaQ0KfItXYc",
-    genre: "Dance",
+    youtubeUrl: youtubeWatchUrl("IaQ0KfItXYc"),
+    genreTags: ["Dance", "Electronic", "Club"],
   },
   {
     slug: "summer-love",
-    title: "Summer Love - Ghostrance (Official Video)",
+    title: "Summer Love - Ghostrance (Official Video) Dance",
     description:
-      "A warmer dance and house-leaning track balancing melodic lift with the brand's darker electronic identity.",
+      "A bright dance-focused Ghostrance track with summer energy, warm melodies, and feel-good club influence.",
     youtubeId: "SZk4AJBMM_Y",
-    youtubeUrl: "https://www.youtube.com/watch?v=SZk4AJBMM_Y",
-    genre: "Dance",
-  },
-  {
-    slug: "united",
-    title: "United - Ghostrance (Official Video)",
-    description:
-      "A direct, anthem-leaning track with broad electronic movement, reggae-adjacent lift, and a promotional video-first presentation.",
-    youtubeId: "fZJeehfjnnk",
-    youtubeUrl: "https://www.youtube.com/watch?v=fZJeehfjnnk",
-    genre: "Electronic",
-  },
-  {
-    slug: "palestine",
-    title: "Palestine - Ghostrance (Official Video)",
-    description:
-      "Jungle and drum and bass intensity with a serious mood, rapid percussion, and a focused visual identity.",
-    youtubeId: "3D6qOtnD5hg",
-    youtubeUrl: "https://www.youtube.com/watch?v=3D6qOtnD5hg",
-    genre: "Drum and Bass",
-  },
-  {
-    slug: "scream",
-    title: "Scream - Ghostrance (Official Video)",
-    description:
-      "A hard-edged DnB release with aggressive pacing, dark atmosphere, and a sharp promotional hook.",
-    youtubeId: "cNeMtBNYynk",
-    youtubeUrl: "https://www.youtube.com/watch?v=cNeMtBNYynk",
-    genre: "DnB",
-  },
-  {
-    slug: "atomik",
-    title: "Ghost Trance - Atomik (Official Video)",
-    description:
-      "Ambient soundtrack textures and indie dance movement collide in a cinematic electronic track with a widescreen feel.",
-    youtubeId: "SZb9_gn-Y_Y",
-    youtubeUrl: "https://www.youtube.com/watch?v=SZb9_gn-Y_Y",
-    genre: "Indie Dance",
+    youtubeUrl: youtubeWatchUrl("SZk4AJBMM_Y"),
+    genreTags: ["Dance", "Summer", "Electronic"],
   },
   {
     slug: "rambo",
-    title: "Ghostrance - Rambo (Official Video)",
+    title: "Rambo - Ghostrance (Official Video) Techno",
     description:
-      "A techno-leaning cut with tight drive, trap-edged impact, stark synth work, and a raw underground character.",
+      "A darker techno-driven Ghostrance track with heavy electronic movement and underground intensity.",
     youtubeId: "uowMGpwxRi8",
-    youtubeUrl: "https://www.youtube.com/watch?v=uowMGpwxRi8",
-    genre: "Techno",
+    youtubeUrl: youtubeWatchUrl("uowMGpwxRi8"),
+    genreTags: ["Techno", "Electronic", "Underground"],
+  },
+  {
+    slug: "hustler",
+    title: "Hustler - Ghostrance (Official Video) Old School Hip Hop",
+    description:
+      "An old-school hip hop influenced Ghostrance track with urban character, rhythm, and street-focused energy.",
+    youtubeId: "j7S3o55GLio",
+    youtubeUrl: youtubeWatchUrl("j7S3o55GLio"),
+    genreTags: ["Hip Hop", "Old School", "Urban"],
+  },
+  {
+    slug: "believe",
+    title: "Believe - Ghostrance (Official Video) Ambient",
+    description:
+      "An ambient Ghostrance track with atmospheric textures, reflective energy, and cinematic electronic mood.",
+    youtubeId: "KKDkQI0juuI",
+    youtubeUrl: youtubeWatchUrl("KKDkQI0juuI"),
+    genreTags: ["Ambient", "Electronic", "Cinematic"],
   },
 ];
