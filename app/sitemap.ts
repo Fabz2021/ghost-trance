@@ -6,7 +6,7 @@ const siteUrl = "https://ghosttrance.com";
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
 
-  const staticRoutes: MetadataRoute.Sitemap = [
+  const rootRoutes: MetadataRoute.Sitemap = [
     {
       url: siteUrl,
       lastModified,
@@ -19,6 +19,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.9,
     },
+  ];
+
+  const trackRoutes: MetadataRoute.Sitemap = tracks.map((track) => ({
+    url: `${siteUrl}/music/${track.slug}`,
+    lastModified,
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
+
+  const staticRoutes: MetadataRoute.Sitemap = [
     {
       url: `${siteUrl}/about`,
       lastModified,
@@ -33,12 +43,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  const trackRoutes: MetadataRoute.Sitemap = tracks.map((track) => ({
-    url: `${siteUrl}/music/${track.slug}`,
-    lastModified,
-    changeFrequency: "monthly",
-    priority: 0.8,
-  }));
-
-  return [...staticRoutes, ...trackRoutes];
+  return [...rootRoutes, ...trackRoutes, ...staticRoutes];
 }

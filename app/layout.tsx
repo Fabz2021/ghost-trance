@@ -4,6 +4,11 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import "./globals.css";
 
+const siteUrl = "https://ghosttrance.com";
+const siteTitle = "Ghost Trance / Ghostrance | YouTube Music Promotion";
+const siteDescription =
+  "Ghost Trance / Ghostrance is a producer and promoter for trance music, electronic music, dance, house, hip hop, DnB, ambient, techno, and YouTube music promotion.";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -15,14 +20,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ghosttrance.com"),
+  metadataBase: new URL(siteUrl),
   applicationName: "Ghost Trance",
   title: {
-    default: "Ghost Trance / Ghostrance | YouTube Music Promotion",
+    default: siteTitle,
     template: "%s | Ghost Trance",
   },
-  description:
-    "Ghost Trance / Ghostrance is a producer and promoter for trance music, electronic music, dance, house, hip hop, DnB, ambient, techno, and YouTube music promotion.",
+  description: siteDescription,
   keywords: [
     "Ghost Trance",
     "Ghostrance",
@@ -43,28 +47,26 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Ghost Trance / Ghostrance | YouTube Music Promotion",
-    description:
-      "Producer and music promoter covering trance, dance, house, hip hop, DnB, ambient, techno, and YouTube-first electronic releases.",
-    url: "https://ghosttrance.com",
+    title: siteTitle,
+    description: siteDescription,
+    url: siteUrl,
     siteName: "Ghost Trance",
     images: [
       {
-        url: "/ghost-trance-logo.jpg",
-        width: 160,
-        height: 160,
-        alt: "Ghost Trance logo",
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Ghost Trance / Ghostrance producer and music promotion brand",
       },
     ],
     locale: "en_GB",
     type: "website",
   },
   twitter: {
-    card: "summary",
-    title: "Ghost Trance / Ghostrance | YouTube Music Promotion",
-    description:
-      "Trance music, electronic music, dance, house, hip hop, DnB, ambient, techno, and YouTube music promotion.",
-    images: ["/ghost-trance-logo.jpg"],
+    card: "summary_large_image",
+    title: siteTitle,
+    description: siteDescription,
+    images: ["/opengraph-image"],
   },
 };
 
