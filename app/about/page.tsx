@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn about Ghost Trance, a premium underground trance and electronic music promotion brand for YouTube-first releases.",
+    "Learn about Ghost Trance / Ghostrance, a producer and music promoter covering dance, house, hip hop, trance, trap, reggae, jungle, DnB, ambient, and techno.",
   alternates: {
     canonical: "/about",
   },
@@ -19,8 +19,8 @@ export default function AboutPage() {
             About the brand
           </p>
           <h1 className="max-w-4xl text-5xl font-semibold text-zinc-50">
-            A premium underground channel for electronic music with cinematic
-            intent.
+            Ghost Trance / Ghostrance is a producer and music promoter with a
+            wide underground electronic range.
           </h1>
         </div>
       </section>
@@ -32,27 +32,29 @@ export default function AboutPage() {
               Ghost Trance
             </p>
             <p className="mt-4 text-3xl font-semibold text-zinc-50">
-              Trance, electronic, drum and bass, dance, and underground video
-              promotion.
+              Dance, house, hip hop, trance, trap, reggae, jungle, DnB,
+              ambient, techno, and YouTube music promotion.
             </p>
           </aside>
           <div className="space-y-6 text-lg leading-8 text-zinc-400">
             <p>
-              Ghost Trance is a music promotion brand focused on dark,
-              cinematic, and high-energy electronic releases. The site exists as
-              a home for YouTube-first tracks, visual campaigns, and artist
-              promotion across trance-adjacent electronic music.
+              Ghost Trance is the website name for the Ghostrance music channel:
+              a producer and promoter focused on original tracks, visual
+              releases, and artist-facing music promotion. The brand moves
+              across dance, house, hip hop, trance, trap, reggae, jungle, DnB,
+              ambient, and techno without losing its dark black-and-gold
+              identity.
             </p>
             <p>
-              The brand direction is premium and underground: black and gold
-              visuals, clean presentation, strong video placement, and copy that
-              can be refined as future releases, playlists, and collaborations
-              are confirmed.
+              The sound and presentation are premium, underground, and
+              cinematic: strong video placement, clean release pages, and a
+              professional platform for YouTube-first music videos and track
+              campaigns.
             </p>
             <p>
-              This first version keeps the structure simple and fast. Track
-              content is stored locally, pages are static, and the site is ready
-              to connect to ghosttrance.com when the domain is configured.
+              This site keeps that catalogue simple and fast, while giving
+              future releases, remixes, collaborations, playlists, and
+              promotional campaigns a clear home at ghosttrance.com.
             </p>
             <Link
               href="/contact"

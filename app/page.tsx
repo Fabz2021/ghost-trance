@@ -2,7 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { TrackCard } from "@/components/track-card";
 import { YouTubeEmbed } from "@/components/youtube-embed";
-import { tracks } from "@/data/tracks";
+import {
+  ghostranceYouTubeChannelName,
+  ghostranceYouTubeChannelUrl,
+  tracks,
+} from "@/data/tracks";
 
 export default function Home() {
   const featuredTrack = tracks.find((track) => track.featured) ?? tracks[0];
@@ -24,19 +28,29 @@ export default function Home() {
             className="mb-8 rounded-full border border-[#d8b45d]/40 shadow-[0_0_80px_rgba(216,180,93,0.26)]"
           />
           <p className="mb-4 text-sm font-semibold uppercase text-[#f0d38a]">
-            Premium underground music promotion
+            Producer and music promoter
           </p>
           <h1 className="max-w-4xl text-5xl font-semibold text-zinc-50">
             Ghost Trance
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-300">
-            Black-and-gold electronic music promotion for trance, drum and
-            bass, dance, techno, and cinematic YouTube-first releases.
+            Ghost Trance, seen on YouTube as {ghostranceYouTubeChannelName}, is
+            a black-and-gold music production and promotion brand spanning
+            dance, house, hip hop, trance, trap, reggae, jungle, DnB, ambient,
+            and techno.
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+            <a
+              href={ghostranceYouTubeChannelUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center rounded-full bg-[#d8b45d] px-6 py-3 text-sm font-semibold text-black transition hover:bg-[#f0d38a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f0d38a]"
+            >
+              Visit YouTube Channel
+            </a>
             <Link
               href="/music"
-              className="inline-flex items-center justify-center rounded-full bg-[#d8b45d] px-6 py-3 text-sm font-semibold text-black transition hover:bg-[#f0d38a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f0d38a]"
+              className="inline-flex items-center justify-center rounded-full border border-[#d8b45d]/40 px-6 py-3 text-sm font-semibold text-[#f0d38a] transition hover:border-[#f0d38a] hover:bg-[#d8b45d] hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f0d38a]"
             >
               Watch the Music
             </Link>
@@ -63,7 +77,7 @@ export default function Home() {
               {featuredTrack.description}
             </p>
             <a
-              href={featuredTrack.youtubeUrl}
+              href={featuredTrack.youtubeUrl ?? ghostranceYouTubeChannelUrl}
               target="_blank"
               rel="noreferrer"
               className="mt-7 inline-flex items-center justify-center rounded-full border border-[#d8b45d]/35 px-5 py-3 text-sm font-semibold text-[#f0d38a] transition hover:border-[#f0d38a] hover:bg-[#d8b45d] hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f0d38a]"
@@ -88,8 +102,9 @@ export default function Home() {
               <p className="text-sm font-semibold uppercase text-[#f0d38a]">
                 Latest tracks
               </p>
-              <h2 id="latest-tracks" className="mt-2 text-3xl font-semibold">
-                Built for dark rooms, headphones, and late-night playlists.
+            <h2 id="latest-tracks" className="mt-2 text-3xl font-semibold">
+                Music videos for dark rooms, headphones, and late-night
+                playlists.
               </h2>
             </div>
             <Link
@@ -114,14 +129,15 @@ export default function Home() {
               About Ghost Trance
             </p>
             <h2 id="about-preview" className="text-3xl font-semibold">
-              A focused home for trance-adjacent electronic promotion.
+              A focused home for production, promotion, and underground reach.
             </h2>
           </div>
           <div className="space-y-6 text-lg leading-8 text-zinc-400">
             <p>
               Ghost Trance packages electronic music with a premium underground
-              visual direction: black, gold, cinematic, and direct. The site is
-              built to make YouTube releases easy to watch, share, and promote.
+              visual direction: black, gold, cinematic, and direct. It supports
+              music production, artist promotion, and YouTube releases across
+              club, bass, and cinematic electronic styles.
             </p>
             <Link
               href="/about"
@@ -147,7 +163,8 @@ export default function Home() {
             </h2>
             <p className="mt-5 leading-7 text-zinc-400">
               Metadata, sitemap, robots configuration, semantic sections, and
-              local track data are in place for ghosttrance.com.
+              local track data are in place for ghosttrance.com and the
+              Ghostrance YouTube channel.
             </p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
@@ -157,6 +174,14 @@ export default function Home() {
             >
               Explore Tracks
             </Link>
+            <a
+              href={ghostranceYouTubeChannelUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center rounded-full border border-[#d8b45d]/40 px-5 py-3 text-sm font-semibold text-[#f0d38a] transition hover:border-[#f0d38a] hover:bg-[#d8b45d] hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f0d38a]"
+            >
+              Visit YouTube Channel
+            </a>
             <Link
               href="/contact"
               className="inline-flex items-center justify-center rounded-full border border-[#d8b45d]/40 px-5 py-3 text-sm font-semibold text-[#f0d38a] transition hover:border-[#f0d38a] hover:bg-[#d8b45d] hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f0d38a]"

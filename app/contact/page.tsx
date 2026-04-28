@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact Ghost Trance for electronic music promotion, YouTube track features, artist campaigns, and collaboration enquiries.",
+    "Contact Ghost Trance for promotion, collaborations, music videos, artist promotion, remixes, YouTube releases, and electronic music enquiries.",
   alternates: {
     canonical: "/contact",
   },
@@ -17,15 +17,16 @@ export default function ContactPage() {
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_0.85fr] lg:items-center">
           <div>
             <p className="mb-4 text-sm font-semibold uppercase text-[#f0d38a]">
-              Promotion enquiries
+              Promotion and collaboration enquiries
             </p>
             <h1 className="max-w-3xl text-5xl font-semibold text-zinc-50">
-              Send music, campaign ideas, and collaboration requests.
+              Send music, video ideas, remixes, and artist promotion requests.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-400">
-              Ghost Trance is open to relevant electronic music promotion,
-              YouTube track features, visual release campaigns, and
-              collaboration conversations. Share a concise note, links to the
+              Ghost Trance / Ghostrance is open to relevant promotion,
+              collaborations, music videos, artist promotion, remixes, and
+              general enquiries across electronic, club, bass, and
+              hip-hop-adjacent releases. Share a concise note, links to the
               music, and the release timeline.
             </p>
           </div>
@@ -41,9 +42,9 @@ export default function ContactPage() {
               contact@ghosttrance.com
             </h2>
             <p className="mt-4 leading-7 text-zinc-400">
-              Include artist name, track link, release date, preferred
-              promotion window, and any video or artwork assets already
-              available.
+              Include artist name, track or video links, release date, preferred
+              promotion window, remix or collaboration details, and any artwork
+              assets already available.
             </p>
             <a
               href="mailto:contact@ghosttrance.com?subject=Ghost%20Trance%20Promotion%20Enquiry"
@@ -62,8 +63,8 @@ export default function ContactPage() {
               Explore the music first.
             </h2>
             <p className="mt-2 text-zinc-400">
-              Review current Ghost Trance tracks before sending a promotion
-              enquiry.
+              Review current Ghost Trance / Ghostrance YouTube tracks before
+              sending a promotion enquiry.
             </p>
           </div>
           <Link

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ghostranceYouTubeChannelUrl } from "@/data/tracks";
 
 export function SiteFooter() {
   return (
@@ -19,8 +20,9 @@ export function SiteFooter() {
             </span>
           </Link>
           <p className="leading-6">
-            Premium trance, electronic, drum and bass, and underground music
-            promotion for YouTube-first releases and cinematic track campaigns.
+            Ghost Trance / Ghostrance is a producer and music promoter covering
+            electronic releases, YouTube-first music videos, and cinematic track
+            campaigns.
           </p>
         </div>
         <div className="flex flex-col gap-3 md:items-end">
@@ -29,6 +31,14 @@ export function SiteFooter() {
             className="text-[#f0d38a] transition hover:text-white"
           >
             contact@ghosttrance.com
+          </a>
+          <a
+            href={ghostranceYouTubeChannelUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="text-[#f0d38a] transition hover:text-white"
+          >
+            YouTube: Ghostrance
           </a>
           <p>ghosttrance.com</p>
           <p>&copy; 2026 Ghost Trance. All rights reserved.</p>

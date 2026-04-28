@@ -3,17 +3,22 @@ export type Track = {
   title: string;
   description: string;
   youtubeId: string;
-  youtubeUrl: string;
+  youtubeUrl?: string;
   genre: string;
   featured?: boolean;
 };
+
+export const ghostranceYouTubeChannelUrl =
+  "https://www.youtube.com/@ghostrance101";
+
+export const ghostranceYouTubeChannelName = "Ghostrance";
 
 export const tracks: Track[] = [
   {
     slug: "mantra",
     title: "Ghostrance - Mantra (Official Video)",
     description:
-      "A high-pressure Ghost Trance cut with liquid drum and bass motion, cinematic tension, and a late-night club pulse.",
+      "A high-pressure Ghost Trance cut with liquid DnB motion, cinematic tension, and a late-night club pulse.",
     youtubeId: "cUbZykps0_c",
     youtubeUrl: "https://www.youtube.com/watch?v=cUbZykps0_c",
     genre: "Liquid DnB",
@@ -23,7 +28,7 @@ export const tracks: Track[] = [
     slug: "wrongbeat",
     title: "Wrongbeat - Ghostrance (Official Video)",
     description:
-      "Dark electronic rhythm work built around a direct hook, heavy low-end movement, and a stripped underground edge.",
+      "Dark electronic rhythm work built around house and techno pressure, heavy low-end movement, and a stripped underground edge.",
     youtubeId: "2j4_EQ9Sro0",
     youtubeUrl: "https://www.youtube.com/watch?v=2j4_EQ9Sro0",
     genre: "Electronic",
@@ -32,7 +37,7 @@ export const tracks: Track[] = [
     slug: "divine",
     title: "Divine - Ghostrance (Official Video)",
     description:
-      "Drum and bass pressure with bright melodic flashes, designed for fast cuts, night drives, and high-energy promotion.",
+      "DnB pressure with bright melodic flashes, designed for fast cuts, night drives, and high-energy promotion.",
     youtubeId: "BMnicP-zPA0",
     youtubeUrl: "https://www.youtube.com/watch?v=BMnicP-zPA0",
     genre: "DnB",
@@ -41,7 +46,7 @@ export const tracks: Track[] = [
     slug: "khabib",
     title: "Khabib - Ghostrance (Official Video)",
     description:
-      "A punchy electronic track with a fight-night atmosphere, tight percussion, and cinematic impact.",
+      "A punchy electronic track with a fight-night atmosphere, tight percussion, hip hop weight, and cinematic impact.",
     youtubeId: "7REsGspyg2Q",
     youtubeUrl: "https://www.youtube.com/watch?v=7REsGspyg2Q",
     genre: "Electronic",
@@ -59,7 +64,7 @@ export const tracks: Track[] = [
     slug: "summer-love",
     title: "Summer Love - Ghostrance (Official Video)",
     description:
-      "A warmer dance track balancing melodic lift with the brand's darker electronic identity.",
+      "A warmer dance and house-leaning track balancing melodic lift with the brand's darker electronic identity.",
     youtubeId: "SZk4AJBMM_Y",
     youtubeUrl: "https://www.youtube.com/watch?v=SZk4AJBMM_Y",
     genre: "Dance",
@@ -68,7 +73,7 @@ export const tracks: Track[] = [
     slug: "united",
     title: "United - Ghostrance (Official Video)",
     description:
-      "A direct, anthem-leaning track with broad electronic movement and a promotional video-first presentation.",
+      "A direct, anthem-leaning track with broad electronic movement, reggae-adjacent lift, and a promotional video-first presentation.",
     youtubeId: "fZJeehfjnnk",
     youtubeUrl: "https://www.youtube.com/watch?v=fZJeehfjnnk",
     genre: "Electronic",
@@ -77,7 +82,7 @@ export const tracks: Track[] = [
     slug: "palestine",
     title: "Palestine - Ghostrance (Official Video)",
     description:
-      "Drum and bass intensity with a serious mood, rapid percussion, and a focused visual identity.",
+      "Jungle and drum and bass intensity with a serious mood, rapid percussion, and a focused visual identity.",
     youtubeId: "3D6qOtnD5hg",
     youtubeUrl: "https://www.youtube.com/watch?v=3D6qOtnD5hg",
     genre: "Drum and Bass",
@@ -95,7 +100,7 @@ export const tracks: Track[] = [
     slug: "atomik",
     title: "Ghost Trance - Atomik (Official Video)",
     description:
-      "Indie dance and soundtrack textures collide in a cinematic electronic track with a widescreen feel.",
+      "Ambient soundtrack textures and indie dance movement collide in a cinematic electronic track with a widescreen feel.",
     youtubeId: "SZb9_gn-Y_Y",
     youtubeUrl: "https://www.youtube.com/watch?v=SZb9_gn-Y_Y",
     genre: "Indie Dance",
@@ -104,7 +109,7 @@ export const tracks: Track[] = [
     slug: "rambo",
     title: "Ghostrance - Rambo (Official Video)",
     description:
-      "A techno-leaning cut with tight drive, stark synth work, and a raw underground character.",
+      "A techno-leaning cut with tight drive, trap-edged impact, stark synth work, and a raw underground character.",
     youtubeId: "uowMGpwxRi8",
     youtubeUrl: "https://www.youtube.com/watch?v=uowMGpwxRi8",
     genre: "Techno",

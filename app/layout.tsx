@@ -18,27 +18,34 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://ghosttrance.com"),
   applicationName: "Ghost Trance",
   title: {
-    default: "Ghost Trance | Trance & Electronic Music",
+    default: "Ghost Trance / Ghostrance | YouTube Music Promotion",
     template: "%s | Ghost Trance",
   },
   description:
-    "Ghost Trance promotes premium trance, electronic music, YouTube tracks, drum and bass, dance releases, and underground music videos.",
+    "Ghost Trance / Ghostrance is a producer and promoter for trance music, electronic music, dance, house, hip hop, DnB, ambient, techno, and YouTube music promotion.",
   keywords: [
     "Ghost Trance",
+    "Ghostrance",
     "trance music",
     "electronic music",
-    "YouTube tracks",
-    "music promotion",
-    "drum and bass",
-    "dance music",
+    "dance",
+    "house",
+    "hip hop",
+    "trap",
+    "reggae",
+    "jungle",
+    "DnB",
+    "ambient",
+    "techno",
+    "YouTube music promotion",
   ],
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Ghost Trance | Trance & Electronic Music",
+    title: "Ghost Trance / Ghostrance | YouTube Music Promotion",
     description:
-      "Premium underground trance and electronic music promotion built around YouTube tracks and cinematic releases.",
+      "Producer and music promoter covering trance, dance, house, hip hop, DnB, ambient, techno, and YouTube-first electronic releases.",
     url: "https://ghosttrance.com",
     siteName: "Ghost Trance",
     images: [
@@ -54,9 +61,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Ghost Trance | Trance & Electronic Music",
+    title: "Ghost Trance / Ghostrance | YouTube Music Promotion",
     description:
-      "Trance, electronic music, YouTube tracks, and underground music promotion.",
+      "Trance music, electronic music, dance, house, hip hop, DnB, ambient, techno, and YouTube music promotion.",
     images: ["/ghost-trance-logo.jpg"],
   },
 };
