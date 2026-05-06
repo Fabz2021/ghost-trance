@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { brandName, brandSentenceName, siteUrl } from "@/data/site";
 import "./globals.css";
 
-const siteUrl = "https://ghosttrance.com";
-const siteTitle = "Ghost Trance / Ghostrance | YouTube Music Promotion";
+const siteTitle = `${brandName} | YouTube Music Promotion`;
 const siteDescription =
-  "Ghost Trance / Ghostrance is a producer and promoter for trance music, electronic music, dance, house, hip hop, DnB, ambient, techno, and YouTube music promotion.";
+  `${brandSentenceName} is a producer and promoter for trance music, electronic music, dance, house, hip hop, DnB, ambient, techno, and YouTube music promotion.`;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,15 +21,16 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  applicationName: "Ghost Trance",
+  applicationName: brandName,
   title: {
     default: siteTitle,
-    template: "%s | Ghost Trance",
+    template: `%s | ${brandName}`,
   },
   description: siteDescription,
   keywords: [
-    "Ghost Trance",
+    "GHOSTRANCE",
     "Ghostrance",
+    "Ghostrance101",
     "trance music",
     "electronic music",
     "dance",
@@ -50,13 +51,13 @@ export const metadata: Metadata = {
     title: siteTitle,
     description: siteDescription,
     url: siteUrl,
-    siteName: "Ghost Trance",
+    siteName: brandName,
     images: [
       {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Ghost Trance / Ghostrance producer and music promotion brand",
+        alt: "GHOSTRANCE logo",
       },
     ],
     locale: "en_GB",

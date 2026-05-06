@@ -1,7 +1,6 @@
 import type { MetadataRoute } from "next";
 import { tracks } from "@/data/tracks";
-
-const siteUrl = "https://ghosttrance.com";
+import { siteUrl } from "@/data/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
@@ -14,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${siteUrl}/music`,
+      url: `${siteUrl}/tracks`,
       lastModified,
       changeFrequency: "weekly",
       priority: 0.9,
@@ -22,7 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const trackRoutes: MetadataRoute.Sitemap = tracks.map((track) => ({
-    url: `${siteUrl}/music/${track.slug}`,
+    url: `${siteUrl}/tracks/${track.slug}`,
     lastModified,
     changeFrequency: "monthly",
     priority: 0.8,

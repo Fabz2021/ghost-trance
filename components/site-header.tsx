@@ -1,9 +1,9 @@
-import Image from "next/image";
 import Link from "next/link";
+import { BrandLogo } from "@/components/brand-logo";
 
 const navigation = [
   { href: "/", label: "Home" },
-  { href: "/music", label: "Music" },
+  { href: "/tracks", label: "Tracks" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
@@ -14,18 +14,14 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-8">
         <Link
           href="/"
-          className="flex items-center gap-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f0d38a]"
-          aria-label="Ghost Trance home"
+          className="flex items-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f0d38a]"
+          aria-label="GHOSTRANCE home"
         >
-          <Image
-            src="/ghost-trance-logo.jpg"
-            alt="Ghost Trance logo"
-            width={44}
-            height={44}
+          <BrandLogo
             priority
-            className="rounded-full border border-[#d8b45d]/40"
+            className="h-16 w-20 sm:h-[4.5rem] sm:w-24"
+            sizes="(min-width: 640px) 96px, 80px"
           />
-          <span className="text-lg font-semibold text-zinc-50">Ghost Trance</span>
         </Link>
         <nav aria-label="Primary navigation">
           <ul className="flex flex-wrap gap-2 text-sm font-medium text-zinc-300 sm:justify-end">

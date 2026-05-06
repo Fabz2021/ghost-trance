@@ -1,6 +1,14 @@
-import Image from "next/image";
 import Link from "next/link";
+import { BrandLogo } from "@/components/brand-logo";
 import { ghostranceYouTubeChannelUrl } from "@/data/tracks";
+import {
+  brandName,
+  brandSentenceName,
+  contactEmail,
+  contactEmailHref,
+  contactPhone,
+  contactPhoneHref,
+} from "@/data/site";
 
 export function SiteFooter() {
   return (
@@ -8,29 +16,26 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-7xl gap-8 px-5 py-10 text-sm text-zinc-400 sm:px-8 md:grid-cols-[1fr_auto]">
         <div className="max-w-xl space-y-4">
           <Link href="/" className="flex w-fit items-center gap-3">
-            <Image
-              src="/ghost-trance-logo.jpg"
-              alt="Ghost Trance logo"
-              width={38}
-              height={38}
-              className="rounded-full border border-[#d8b45d]/35"
-            />
-            <span className="text-base font-semibold text-zinc-50">
-              Ghost Trance
-            </span>
+            <BrandLogo className="h-16 w-20" sizes="80px" />
           </Link>
           <p className="leading-6">
-            Ghost Trance / Ghostrance is a producer and music promoter covering
-            electronic releases, YouTube-first music videos, and cinematic track
-            campaigns.
+            {brandSentenceName} is a producer and music promoter covering
+            electronic releases, YouTube-first videos, and cinematic track
+            campaigns under the {brandName} brand.
           </p>
         </div>
         <div className="flex flex-col gap-3 md:items-end">
           <a
-            href="mailto:contact@ghosttrance.com"
+            href={contactEmailHref}
             className="text-[#f0d38a] transition hover:text-white"
           >
-            contact@ghosttrance.com
+            {contactEmail}
+          </a>
+          <a
+            href={contactPhoneHref}
+            className="text-[#f0d38a] transition hover:text-white"
+          >
+            {contactPhone}
           </a>
           <a
             href={ghostranceYouTubeChannelUrl}
@@ -40,8 +45,8 @@ export function SiteFooter() {
           >
             YouTube: Ghostrance
           </a>
-          <p>ghosttrance.com</p>
-          <p>&copy; 2026 Ghost Trance. All rights reserved.</p>
+          <p>ghostrance.com</p>
+          <p>&copy; 2026 {brandName}. All rights reserved.</p>
         </div>
       </div>
     </footer>

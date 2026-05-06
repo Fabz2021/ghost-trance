@@ -2,11 +2,17 @@
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { ImageResponse } from "next/og";
+import {
+  brandName,
+  brandSentenceName,
+  logoAlt,
+  logoPath,
+  siteUrl,
+} from "@/data/site";
 
 export const runtime = "nodejs";
 
-export const alt =
-  "Ghost Trance / Ghostrance producer and YouTube music promotion brand";
+export const alt = logoAlt;
 
 export const size = {
   width: 1200,
@@ -17,7 +23,7 @@ export const contentType = "image/png";
 
 export default async function Image() {
   const logoData = await readFile(
-    join(process.cwd(), "public", "ghost-trance-logo.jpg"),
+    join(process.cwd(), "public", logoPath.replace(/^\//, "")),
     "base64",
   );
   const logoSrc = `data:image/jpeg;base64,${logoData}`;
@@ -59,13 +65,12 @@ export default async function Image() {
             style={{
               display: "flex",
               flexDirection: "column",
-              fontSize: 88,
+              fontSize: 102,
               fontWeight: 800,
               lineHeight: 0.95,
             }}
           >
-            <span>Ghost Trance</span>
-            <span style={{ color: "#f0d38a" }}>Ghostrance</span>
+            <span>{brandName}</span>
           </div>
           <div
             style={{
@@ -74,8 +79,7 @@ export default async function Image() {
               lineHeight: 1.25,
             }}
           >
-            Trance, electronic, dance, DnB, ambient, techno and YouTube music
-            promotion.
+            {`${brandSentenceName} covers trance, electronic, dance, DnB, ambient, techno, and YouTube music promotion.`}
           </div>
           <div
             style={{
@@ -84,27 +88,28 @@ export default async function Image() {
               fontWeight: 700,
             }}
           >
-            ghosttrance.com
+            {siteUrl.replace("https://", "")}
           </div>
         </div>
         <div
           style={{
             alignItems: "center",
             border: "2px solid rgba(240, 211, 138, 0.45)",
-            borderRadius: 220,
+            borderRadius: 28,
             display: "flex",
             height: 300,
             justifyContent: "center",
-            width: 300,
+            overflow: "hidden",
+            width: 360,
           }}
         >
           <img
-            alt="Ghost Trance logo"
+            alt={logoAlt}
             src={logoSrc}
             style={{
-              borderRadius: 160,
-              height: 240,
-              width: 240,
+              height: 300,
+              objectFit: "contain",
+              width: 360,
             }}
           />
         </div>
